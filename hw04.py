@@ -7,17 +7,45 @@ import sys
 
 secret_word = "food"
 
+
 # Task 1
 def check_text():
     """ Add your docstring """
-    pass
+    a = input(" give me a sentance: ")
+    while secret_word not in a:
+        if "dog" in a:
+            print("you used the word \"dog\"")
+            break
+        if "Dog" in a:
+            print("you used the word\"Dog\"")
+            break
+        else:
+            print("try again")
+            a = input(" give me a sentance: ")
+    if secret_word in a:
+        print("You used the secret word!")
+            
+        
 
 
 
 # Task 2
 def check_greater():
     """ Add your docstring """
-    pass
+    b = int(input("give me an integer: "))
+    c = int(input("give me a second integer: "))
+    while True:
+        if b > c:
+            print("first is greater")
+            break
+        elif c > b:
+            print("second is greater")
+            break
+        else:
+            print("try again")
+            b = int(input("give me an integer: "))
+            c = int(input("give me a second integer: "))
+            
 
 
 
