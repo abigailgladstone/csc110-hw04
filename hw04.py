@@ -32,7 +32,7 @@ then checks it against the word dog and Dog. and if it doesnt have that you have
 # Task 2
 def check_greater():
     """this function gets two integer inputs from the user and decides which one is bigger.
-if they are the same ot goes again"""
+if they are the same it goes again"""
     b = int(input("give me an integer: "))
     c = int(input("give me a second integer: "))
     while True:
@@ -42,7 +42,7 @@ if they are the same ot goes again"""
         elif c > b:
             print("Second is Greater")
             break
-        else:  
+        elif b == c:  
             print("try again")
             b = int(input("give me an integer: ")) #  allows for the loop to repeat
             c = int(input("give me a second integer: "))
@@ -79,7 +79,7 @@ then it compares them to the ascii values and decide if its a vowle or a consona
             else:
                 print("letter", m, "is a consonant")
         else:
-            sys.exit()
+            break
     
 
     
@@ -96,7 +96,7 @@ the loop ends, if c is chosen exit code, if other letrer inputed repeat"""
             print("Goodbye")
             break # exits the loop
         elif user_choice == "c": 
-            sys.exit()# quits the code
+            break# quits the code
         else:
             print("try again")
             user_choice = input("Choose one option: a, b, or c: ")
