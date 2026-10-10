@@ -1,7 +1,7 @@
 # ------------------------------------------------------
-#        Name: (put your name here)
+#        Name: (Abigail)
 #       Peers: (add any collaborators)
-#  References: (anything you checked to solve this)
+#  References: (https://realpython.com/ref/glossary/ascii/)
 # ------------------------------------------------------
 import sys
 
@@ -10,17 +10,20 @@ secret_word = "food"
 
 # Task 1
 def check_text():
-    """ Add your docstring """
+    """ This function takes in a sentence from the user and then checks it against the secret word
+then checks it against the word dog and Dog. and if it doesnt have that you have to try again"""
     a = input(" give me a sentance: ")
-    while secret_word not in a:
-        if "dog" in a or "Dog" in a:
-            print("you used the word \"dog\" or the word \"Dog\"")
+    while True:
+        if secret_word in a: # doesn't need to be in the loop since it is not repeated
+            print("You used the secret word!")
+            break
+        elif "dog" in a or "Dog" in a: # must set both into a or it wont work
+            print("you used the word \"dog\" or the word \"Dog\"!")
             break
         else:
-            print("try again")
+            print("Try again")
             a = input(" give me a sentance: ")
-    if secret_word in a:
-        print("You used the secret word!")
+    
             
         
 
@@ -28,19 +31,20 @@ def check_text():
 
 # Task 2
 def check_greater():
-    """ Add your docstring """
+    """this function gets two integer inputs from the user and decides which one is bigger.
+if they are the same ot goes again"""
     b = int(input("give me an integer: "))
     c = int(input("give me a second integer: "))
     while True:
         if b > c:
-            print("first is greater")
+            print("First is Greater")
             break
         elif c > b:
-            print("second is greater")
+            print("Second is Greater")
             break
-        else:
+        else:  
             print("try again")
-            b = int(input("give me an integer: "))
+            b = int(input("give me an integer: ")) #  allows for the loop to repeat
             c = int(input("give me a second integer: "))
             
 
@@ -48,30 +52,34 @@ def check_greater():
 
 # Task 3
 def get_special_numbers():
-    """ Add your docstring """
+    """ This function takes numbers [1,40] and tests them against certain conditions
+these if it passes said contitions it will be printed, if not it will be discarded"""
     for d in range (1, 41):
         if d % 2 == 0:
-            continue
+            continue # need this to pass onto the next condition
         elif d % 5 == 0:
             continue
         elif d % 3 != 0:
             continue
         else:
-            print(d)
+            print(d) # only will happen if all the of statements are passed
 
 
 # Task 4.a
 def my_for_loop():
-    """ Add your docstring """
-    my_list_vowel = [97, 101, 105, 111, 117]
+    """ takes input from user, this string must be a 2 to 5 letter word, if not it will be ignored.
+then it compares them to the ascii values and decide if its a vowle or a consonant"""
+    my_list_vowel = [97, 101, 105, 111, 117] # ascii values for aeoiu
     v =  input("give me a string: ")
-    l = len(v)
+    l = len(v) # stores length of the input
     if 2<= l <= 5:
         for m in v:
             if ord(m) in my_list_vowel:
                 print("letter ", m, "is a vowel")
             else:
                 print("letter ", m, "is a consonant")
+    else:
+        break
         
     
 
@@ -79,16 +87,17 @@ def my_for_loop():
 
 # Task 4.b
 def my_while_loop():
-    """ Add your docstring """
+    """ takes inputed choice. is a is chosen the question is repeated, if b is chosen
+the loop ends, if c is chosen exit code, if other letrer inputed repeat"""
     user_choice = input("Choose one option: a, b, or c: ")
     while True:
         if user_choice == "a":
             user_choice = input("Choose one option: a, b, or c: ")
         elif user_choice == "b":
             print("Goodbye")
-            break
-        elif user_choice == "c":
-            sys.exit()
+            break # exits the loop
+        elif user_choice == "c": 
+            sys.exit()# quits the code
         else:
             print("try again")
             user_choice = input("Choose one option: a, b, or c: ")
