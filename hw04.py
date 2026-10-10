@@ -72,14 +72,14 @@ then it compares them to the ascii values and decide if its a vowle or a consona
     my_list_vowel = [97, 101, 105, 111, 117] # ascii values for aeoiu
     v =  input("give me a string: ")
     l = len(v) # stores length of the input
-    if 2<= l <= 5:
-        for m in v:
+    for m in v:
+        if 2<= l <= 5:
             if ord(m) in my_list_vowel:
-                print("letter ", m, "is a vowel")
+                print("letter", m, "is a vowel")
             else:
-                print("letter ", m, "is a consonant")
-    
-        
+                print("letter", m, "is a consonant")
+        else:
+            sys.exit()
     
 
     
