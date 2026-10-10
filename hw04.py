@@ -78,8 +78,7 @@ then it compares them to the ascii values and decide if its a vowle or a consona
                 print("letter ", m, "is a vowel")
             else:
                 print("letter ", m, "is a consonant")
-    else:
-        break
+    
         
     
 
