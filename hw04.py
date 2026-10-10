@@ -43,7 +43,7 @@ if they are the same it goes again"""
             print("Second is Greater")
             break
         elif b == c:  
-            print("try again")
+            print("Try again")
             b = int(input("give me an integer: ")) #  allows for the loop to repeat
             c = int(input("give me a second integer: "))
             
