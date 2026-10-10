@@ -13,11 +13,8 @@ def check_text():
     """ Add your docstring """
     a = input(" give me a sentance: ")
     while secret_word not in a:
-        if "dog" in a:
-            print("you used the word \"dog\"")
-            break
-        if "Dog" in a:
-            print("you used the word\"Dog\"")
+        if "dog" in a or "Dog" in a:
+            print("you used the word \"dog\" or the word \"Dog\"")
             break
         else:
             print("try again")
@@ -52,18 +49,51 @@ def check_greater():
 # Task 3
 def get_special_numbers():
     """ Add your docstring """
-    pass
+    for d in range (1, 41):
+        if d % 2 == 0:
+            continue
+        elif d % 5 == 0:
+            continue
+        elif d % 3 != 0:
+            continue
+        else:
+            print(d)
 
 
 # Task 4.a
 def my_for_loop():
     """ Add your docstring """
-    pass
+    my_list_vowel = [97, 101, 105, 111, 117]
+    v =  input("give me a string: ")
+    l = len(v)
+    if 2<= l <= 5:
+        for m in v:
+            if ord(m) in my_list_vowel:
+                print("letter ", m, "is a vowel")
+            else:
+                print("letter ", m, "is a consonant")
+        
+    
+
+    
 
 # Task 4.b
 def my_while_loop():
     """ Add your docstring """
-    pass
+    user_choice = input("Choose one option: a, b, or c: ")
+    while True:
+        if user_choice == "a":
+            user_choice = input("Choose one option: a, b, or c: ")
+        elif user_choice == "b":
+            print("Goodbye")
+            break
+        elif user_choice == "c":
+            sys.exit()
+        else:
+            print("try again")
+            user_choice = input("Choose one option: a, b, or c: ")
+            
+            
 
 # ---------------------------------------
 # Do not modify anything below this line
