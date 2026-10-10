@@ -80,7 +80,7 @@ then it compares them to the ascii values and decide if its a vowle or a consona
             elif ord(m) not in my_list_vowel:
                 print("letter", m, "is a consonant")
         else:
-            sys.exit()
+            SystemExit
     
 
     
@@ -97,7 +97,7 @@ the loop ends, if c is chosen exit code, if other letrer inputed repeat"""
             print("Goodbye")
             break # exits the loop
         elif user_choice == "c": 
-            sys.exit()# quits the code
+            SystemExit# quits the code
         else:
             print("try again")
             user_choice = input("Choose one option: a, b, or c: ")
