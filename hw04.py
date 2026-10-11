@@ -70,7 +70,7 @@ these if it passes said contitions it will be printed, if not it will be discard
 def my_for_loop():
     """ takes input from user, this string must be a 2 to 5 letter word, if not it will be ignored.
 then it compares them to the ascii values and decide if its a vowle or a consonant"""
-    my_list_vowel = [97, 101, 105, 111, 117] # ascii values for aeoiu
+    my_list_vowel = [97, 101, 105, 111, 117, 65, 69, 73, 79, 85] # ascii values for aeoiu
     v =  input("give me a string: ")
     l = len(v) # stores length of the input
     for m in v:
@@ -80,7 +80,7 @@ then it compares them to the ascii values and decide if its a vowle or a consona
             elif ord(m) not in my_list_vowel:
                 print("letter", m, "is a consonant")
         else:
-            SystemExit()
+            sys.exit()
     
 
     
