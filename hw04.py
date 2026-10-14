@@ -1,5 +1,5 @@
 # ------------------------------------------------------
-#        Name: (Abigail)
+#        Name: (Abigail Gladstone)
 #       Peers: (add any collaborators)
 #  References: (https://realpython.com/ref/glossary/ascii/)
 # ------------------------------------------------------
@@ -80,6 +80,7 @@ then it compares them to the ascii values and decide if its a vowle or a consona
             elif ord(m) not in my_list_vowel:
                 print("letter", m, "is a consonant")
         else:
+            print("bad word")
             sys.exit()
     
 
